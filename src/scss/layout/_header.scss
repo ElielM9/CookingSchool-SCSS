@@ -1,0 +1,21 @@
+@use "config/mixins" as mix;
+
+.header {
+  padding: 5rem 0;
+
+  &__grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    @include mix.tablet {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__logo {
+    width: 20rem;
+  }
+}

@@ -1,0 +1,25 @@
+@use "config/variables" as var;
+@use "config/mixins" as mix;
+
+.footer {
+  padding: 3rem 0;
+  border-bottom: 0.5rem solid var.$primary-color;
+
+  &__grid {
+    @include mix.tablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__copy {
+    text-align: center;
+    font-size: 2rem;
+    line-height: normal;
+
+    @include mix.tablet {
+      margin: 0;
+    }
+  }
+}

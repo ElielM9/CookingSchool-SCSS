@@ -1,0 +1,24 @@
+@use "config/variables" as var;
+@use "config/mixins" as mix;
+
+.hero-school {
+  padding: 15rem 0;
+  @include mix.bgImage("backgrounds/chef_bg.jpg");
+  text-align: center;
+  color: var.$white;
+
+  &__heading {
+    font-weight: 700;
+  }
+
+  &__text {
+    margin: 0 auto;
+    font-size: 2.6rem;
+    max-width: 50rem;
+  }
+
+  &__btn {
+    @include mix.button(var.$primary-color, var.$white);
+    display: inline-block;
+  }
+}

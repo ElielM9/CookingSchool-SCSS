@@ -1,0 +1,24 @@
+@use "config/variables" as var;
+@use "config/mixins" as mix;
+
+.about {
+  padding: 5rem 0;
+
+  &__heading {
+    @include mix.heading;
+  }
+
+  &__grid {
+    @include mix.tablet {
+      @include mix.grid(3, 2rem);
+    }
+  }
+
+  &__block {
+    text-align: center;
+  }
+
+  &__img {
+    margin: 0 auto;
+  }
+}

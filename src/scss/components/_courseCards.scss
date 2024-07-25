@@ -1,0 +1,45 @@
+@use "config/variables" as var;
+@use "config/mixins" as mix;
+
+.course-card {
+  border: 0.1rem solid darken(var.$gray, 10%);
+  border-radius: 1rem;
+  background-color: var.$white;
+  overflow: hidden;
+
+  &__meta {
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var.$primary-color;
+    color: var.$white;
+  }
+
+  &__price {
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background-color: var.$secondary-color;
+    color: var.$black;
+    font-weight: 700;
+  }
+
+  &__content {
+    padding: 2rem;
+  }
+
+  &__description {
+    color: var.$primary-color;
+  }
+
+  &__text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  &__btn {
+    @include mix.button(var.$primary-color, var.$white);
+  }
+}

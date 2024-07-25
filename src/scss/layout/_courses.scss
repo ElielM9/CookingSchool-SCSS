@@ -1,0 +1,24 @@
+@use "config/variables" as var;
+@use "config/mixins" as mix;
+
+.courses {
+  padding: 5rem 0;
+  background-color: var.$gray;
+
+  &__heading {
+    @include mix.heading;
+  }
+
+  &__grid {
+    @include mix.grid(1, 2rem);
+    align-items: start;
+
+    @include mix.tablet {
+      @include mix.grid(2, 2rem);
+    }
+
+    @include mix.desktop {
+      @include mix.grid(3, 2rem);
+    }
+  }
+}

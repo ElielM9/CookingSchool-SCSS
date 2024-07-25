@@ -1,0 +1,21 @@
+@use "config/variables" as var;
+@use "config/mixins" as mix;
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  @include mix.tablet {
+    flex-direction: row;
+  }
+
+  &__link {
+    font-size: 2rem;
+
+    @include mix.hover(color, 0.3s, ease-in-out) {
+      color: var.$primary-color;
+    }
+  }
+}
